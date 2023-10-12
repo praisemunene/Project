@@ -14,8 +14,8 @@ class MainActivity : BaseActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
-
-    private fun setupActionBar(){
-        setSupportActionBar(binding)
+//
+//    private fun setupActionBar(){
+//        setSupportActionBar(binding)
     }
-}
+//}
