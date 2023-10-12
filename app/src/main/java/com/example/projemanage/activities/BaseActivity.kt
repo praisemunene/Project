@@ -1,9 +1,11 @@
 package com.example.projemanage.activities
 
+import android.app.AlertDialog
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.widget.Button
 import android.widget.Toast
 import androidx.compose.material3.Snackbar
 import androidx.compose.runtime.Composable
@@ -31,15 +33,22 @@ open class BaseActivity : AppCompatActivity() {
     }
 
 
-//    fun showProgressDialogue(text:String){
+    fun showProgressDialogue(text:String){
 //        mProgressDialog = Dialog(this)
-//        binding = DataBindingUtil.inflate<>(layoutInflater,R.drawable.)
+//        binding = DataBindingUtil.inflate(layoutInflater,R.drawable.)
 //
 //        mProgressDialog.setContentView(binding.root)
-//        binding.tv_progress_text.text = text
+//        binding
 //        //start the dialog and display it on the screen
 //        mProgressDialog.show()
-//    }
+        val progressBtn = findViewById<Button>(R.id.btn_sign_up)
+        progressBtn.setOnClickListener{
+            val builder = AlertDialog.Builder(this)
+            builder.setView(R.layout.dialog_progress)
+            val progressDialog = builder.create()
+            progressDialog.show()
+        }
+    }
 
     fun getCurrentUserID():String{
         return FirebaseAuth.getInstance().currentUser!!.uid
@@ -69,3 +78,4 @@ open class BaseActivity : AppCompatActivity() {
         snackBar.show()
     }
 }
+

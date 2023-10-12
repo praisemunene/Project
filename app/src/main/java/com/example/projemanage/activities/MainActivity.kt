@@ -1,8 +1,6 @@
 package com.example.projemanage.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.projemanage.R
 import com.example.projemanage.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {
