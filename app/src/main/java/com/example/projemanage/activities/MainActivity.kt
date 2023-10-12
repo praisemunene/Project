@@ -12,6 +12,13 @@ class MainActivity : BaseActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
+
+    fun sum(a:Int,b:Int){
+        val result = a+b
+        println(result)
+
+    }
+
 //
 //    private fun setupActionBar(){
 //        setSupportActionBar(binding)
